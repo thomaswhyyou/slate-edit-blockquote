@@ -1,0 +1,92 @@
+{
+  "name": "thomaswhyyou/slate-edit-blockquote",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "",
+  "branch": "master",
+  "style": {
+    "name": "Swiss",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/SwissHeader",
+      "article": "article/SwissArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
+    "heading": {
+      "fontWeight": 700,
+      "letterSpacing": "-0.01em"
+    },
+    "layout": {
+      "fluid": true
+    },
+    "colors": {
+      "text": "#000",
+      "background": "#fff",
+      "primary": "#05a",
+      "secondary": "#444",
+      "highlight": "#f30",
+      "border": "#ccc",
+      "muted": "#eee"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://gitbookio.github.io/slate-edit-blockquote/",
+          "text": "Home"
+        },
+        {
+          "href": "https://github.com/thomaswhyyou/slate-edit-blockquote",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/slate-edit-blockquote",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "slate-edit-blockquote",
+      "subhead": "A Slate plugin to handle keyboard events in blockquotes",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "slate-edit-blockquote: A Slate plugin to handle keyboard events in blockquotes",
+          "url": "https://gitbookio.github.io/slate-edit-blockquote/"
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "thomaswhyyou",
+          "repo": "slate-edit-blockquote"
+        }
+      ],
+      "text": "v0.2.0"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "\n<p><a href=\"http://badge.fury.io/js/slate-edit-blockquote\"><img src=\"https://badge.fury.io/js/slate-edit-blockquote.svg\"></a>\n<a href=\"https://travis-ci.org/GitbookIO/slate-edit-blockquote\"><img src=\"https://travis-ci.org/GitbookIO/slate-edit-blockquote.png?branch=master\"></a></p>\n<p>A Slate plugin to handle keyboard events in blockquotes. Blockquotes can contain blocks.</p>\n<h3>Install</h3>\n<pre>npm install slate-<span class=\"hljs-keyword\">edit</span>-blockquote</pre><h3>Features</h3>\n<p>Natural keybindings:</p>\n<ul>\n<li>Pressing Enter in an empty block of a blockquote, exits the blockquote</li>\n<li>Pressing Backspace at the start of a block in a blockquote, unwraps from the blockquote</li>\n</ul>\n<h3>Simple Usage</h3>\n<pre><span class=\"hljs-keyword\">import</span> EditBlockquote <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;slate-edit-blockquote&apos;</span>\n\n<span class=\"hljs-keyword\">const</span> plugins = [\n  EditBlockquote()\n]</pre><h4>Arguments</h4>\n<p>This plugin accepts options to redefine the following block types:</p>\n<ul>\n<li><code>[type: String]</code> &#x2014; type for blockquotes</li>\n<li><code>[typeDefault: String]</code> &#x2014; type for default block in blockquote.</li>\n</ul>\n<h3>Utilities</h3>\n<p><code>slate-edit-blockquote</code> exports utilities and transforms:</p>\n<h4><code>utils.isSelectionInBlockquote</code></h4>\n<p><code>plugin.utils.isSelectionInBlockquote(state: State) =&gt; Boolean</code></p>\n<p>Return true if selection is inside a blockquote (and it can be unwrap).</p>\n<h4><code>transforms.wrapInBlockquote</code></h4>\n<p><code>plugin.transforms.wrapInBlockquote(transform: Transform) =&gt; Transform</code></p>\n<p>Wrap current block in a new blockquote.</p>\n<h4><code>transforms.unwrapBlockquote</code></h4>\n<p><code>plugin.transforms.unwrapBlockquote(transform: Transform) =&gt; Transform</code></p>\n<p>Unwrap from current blockquote if any.</p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/thomaswhyyou/slate-edit-blockquote",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/thomaswhyyou",
+          "text": "thomaswhyyou"
+        }
+      ]
+    }
+  ]
+}
